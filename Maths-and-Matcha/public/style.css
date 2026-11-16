@@ -1,0 +1,438 @@
+
+:root {
+  --pink: #e9a5bd;
+  --deep: #b85f85;
+  --light: #fff6f8;
+  --cream: #fffdf9;
+  --text: #57434d;
+  --lavender: #eee8f8;
+  --muted: #987d89;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--light);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+button, input {
+  font: inherit;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: white;
+}
+
+.logo {
+  color: var(--deep);
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-note {
+  color: #b18a9b;
+  font-size: 13px;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(
+    135deg,
+    #fbe5ed,
+    #fff8f3,
+    #eee8f8
+  );
+}
+
+.hero-decoration {
+  color: var(--deep);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  color: var(--deep);
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: var(--deep);
+  font-style: italic;
+}
+
+.hero-text {
+  max-width: 450px;
+  margin: 24px auto;
+  color: #806b75;
+}
+
+.main-button {
+  display: inline-block;
+  border: none;
+  background: var(--deep);
+  color: white;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.main-button:hover {
+  background: #984668;
+  transform: translateY(-3px);
+}
+
+.main-button:disabled {
+  opacity: .6;
+  cursor: wait;
+  transform: none;
+}
+
+.hero-footer {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #aa8293;
+}
+
+.section {
+  padding: 80px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-heading h2 {
+  font-size: clamp(27px, 4vw, 38px);
+  margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.search-area {
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+#topic-search {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #edcbd9;
+  border-radius: 13px;
+  padding: 14px 16px;
+  background: white;
+  color: var(--text);
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--deep);
+  box-shadow: 0 0 0 3px #e9a5bd25;
+}
+
+.search-hint {
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.topic-card {
+  text-align: left;
+  padding: 26px;
+  background: white;
+  border: 1px solid #f3dce5;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .25s;
+  color: var(--text);
+}
+
+.topic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px #e9a5bd30;
+  border-color: var(--pink);
+}
+
+.topic-card span {
+  font-size: 29px;
+}
+
+.topic-card h3 {
+  margin: 12px 0 5px;
+}
+
+.topic-card p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.lesson-card,
+.practice-card,
+.chat-card {
+  max-width: 760px;
+  margin: auto;
+  background: white;
+  border-radius: 22px;
+  padding: 32px;
+  box-shadow: 0 8px 35px #c78ba51a;
+}
+
+.lesson-card h3 {
+  color: var(--deep);
+  margin: 22px 0 10px;
+}
+
+.lesson-card p {
+  white-space: pre-wrap;
+}
+
+.formula-box {
+  background: var(--lavender);
+  border-radius: 15px;
+  padding: 22px;
+  margin: 25px 0;
+}
+
+.formula-box h4 {
+  color: #8665ad;
+  margin-bottom: 8px;
+}
+
+.solution-box {
+  background: var(--light);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 15px;
+  white-space: pre-wrap;
+  line-height: 1.9;
+}
+
+#ask-ai {
+  margin-top: 25px;
+}
+
+.practice-card {
+  display: grid;
+  gap: 18px;
+}
+
+#feedback {
+  color: var(--deep);
+  font-weight: 600;
+}
+
+.messages {
+  height: 340px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 12px;
+  scroll-behavior: smooth;
+}
+
+.bot-message,
+.user-message {
+  padding: 14px 17px;
+  border-radius: 17px;
+  max-width: 88%;
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.bot-message {
+  background: #f9eaf0;
+  align-self: flex-start;
+}
+
+.user-message {
+  background: var(--lavender);
+  align-self: flex-end;
+}
+
+#chat-form {
+  display: flex;
+  gap: 10px;
+  padding-top: 15px;
+}
+
+#chat-form button {
+  border: none;
+  background: var(--deep);
+  color: white;
+  border-radius: 12px;
+  padding: 0 22px;
+  cursor: pointer;
+}
+
+#chat-form button:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.chat-note {
+  text-align: center;
+  color: #ad8798;
+  font-size: 11px;
+  margin-top: 15px;
+}
+
+.motivation {
+  text-align: center;
+  background: linear-gradient(120deg, #f9e4ed, #f2eafa);
+  padding: 65px 20px;
+}
+
+.motivation div {
+  font-size: 35px;
+}
+
+.motivation h2 {
+  margin: 15px;
+}
+
+.motivation p {
+  max-width: 450px;
+  margin: 15px auto;
+  line-height: 1.9;
+  white-space: pre-line;
+}
+
+.motivation h3 {
+  color: var(--deep);
+  margin-top: 22px;
+}
+
+.gift-note {
+  text-align: center;
+  background: white;
+  padding: 70px 20px;
+}
+
+.gift-note h2 {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.gift-note p:not(.eyebrow) {
+  max-width: 450px;
+  margin: auto;
+  white-space: pre-line;
+}
+
+.gift-heart {
+  font-size: 35px;
+  margin-top: 20px;
+}
+
+footer {
+  background: #fff0f5;
+  text-align: center;
+  padding: 30px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+footer p {
+  margin-top: 8px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  .topic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    padding: 60px 5%;
+  }
+
+  .navbar {
+    padding: 17px 5%;
+  }
+
+  .nav-note {
+    font-size: 10px;
+  }
+
+  .lesson-card,
+  .practice-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 450px) {
+  .topic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #topic-search,
+  #chat-form {
+    flex-direction: column;
+  }
+
+  #topic-search button,
+  #chat-form button {
+    padding: 14px;
+  }
+
+  .hero {
+    padding: 75px 18px;
+  }
+}
