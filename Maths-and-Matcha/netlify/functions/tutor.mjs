@@ -27,7 +27,7 @@ export default async (request) => {
     }
 
     // Get the secret Groq API key
-    const apiKey = process.env.GROQ_API_KEY;
+    const apiKey = process.env.groq_ai;
 
     if (!apiKey) {
       return Response.json(
